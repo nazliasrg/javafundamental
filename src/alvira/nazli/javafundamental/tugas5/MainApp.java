@@ -44,8 +44,9 @@ public class MainApp {
             menuKembali = scanner.next();
         }
         while (!menuKembali.equalsIgnoreCase("n") && menuKembali.equalsIgnoreCase("y"));
+
         System.out.println("============================================================================================");
-        System.out.println("                                        Cetak Bill Pemesanan                                ");
+        System.out.println("                                       Cetak Bill Pemesanan                                 ");
         System.out.println("============================================================================================");
 
         total= menuPahe.setTotalHarga() + menuMakanan.setTotalHarga() + menuMinuman.setTotalHarga();
