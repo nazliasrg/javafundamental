@@ -1,5 +1,9 @@
 package alvira.nazli.javafundamental.tugas5;
 
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,7 +15,9 @@ public class MainApp {
         ArrayList<String> pesananUser = new ArrayList<>();
         ArrayList<String> hargaPesananUser = new ArrayList<>();
         ArrayList<ArrayList<String>> menuPilihanUser = new ArrayList<>();
+
         Scanner scanner = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("#.##");
 
         MenuPahe menuPahe = new MenuPahe();
         MenuMakanan menuMakanan = new MenuMakanan();
@@ -45,6 +51,14 @@ public class MainApp {
         }
         while (!menuKembali.equalsIgnoreCase("n") && menuKembali.equalsIgnoreCase("y"));
 
+        scanner.close();
+
+        LocalDateTime timeNow = LocalDateTime.now();
+        // Date Formatter
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy HH:mm:ss");
+        String formattedDate = timeNow.format(myFormatObj);
+
+
         System.out.println("============================================================================================");
         System.out.println("                                       Cetak Bill Pemesanan                                 ");
         System.out.println("============================================================================================");
@@ -55,13 +69,15 @@ public class MainApp {
         menuPilihanUser.add(pesananUser);
         menuPilihanUser.add(hargaPesananUser);
 
-        System.out.println("Daftar Menu");
+        System.out.println("\nDaftar Menu");
         System.out.println("No.  Menu ");
         for (int i=0; i<menuPilihanUser.get(0).size(); i++) {
-                System.out.println(i+1 + ".   " + menuPilihanUser.get(0).get(i) + "    =>   Rp " + menuPilihanUser.get(1).get(i));
+                System.out.println(i+1 + ".   " + menuPilihanUser.get(0).get(i) + "    =>   Rp " + df.format(Double.parseDouble(menuPilihanUser.get(1).get(i))));
         }
-        System.out.println("Total Harga                    => Rp " + total);
-        System.out.println("Total Harga setelah PPn (10%)  => Rp " + totalPPn);
+
+        System.out.println("\nTotal Harga                    => Rp " + df.format(total));
+        System.out.println("Total Harga setelah PPn (10%)  => Rp " + df.format(totalPPn));
+        System.out.println("\nWaktu Cetak Bill : " + formattedDate);
         System.out.println("============================================================================================");
     }
 }

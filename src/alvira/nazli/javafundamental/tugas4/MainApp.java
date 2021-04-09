@@ -26,6 +26,8 @@ public class MainApp {
         daftarMataKuliahStudent.add(course.setSksMataKuliahPilihanStudent());
         daftarMataKuliahStudent.add(course.setRuanganMataKuliahPilihanStudent());
 
+        scanner.close();
+
         System.out.println("\n\n============================================================================================");
         System.out.println("                      DATA DIRI DAN RINCIAN MATA KULIAH YANG ANDA AMBIL                     ");
         System.out.println("============================================================================================");

@@ -2,6 +2,7 @@ package alvira.nazli.javafundamental.tugas5;
 
 import alvira.nazli.javafundamental.tugas5.abstractions.BillInterface;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,7 +21,9 @@ public class MenuMinuman implements BillInterface{
     String menuUlang;
     ArrayList<String > menuMinumanList = new ArrayList<>();
     ArrayList<String> hargaMenuMinumanList = new ArrayList<>();
+
     Scanner scanner = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat("#.##");
 
     public void cetakMenuMinuman(){
         do{
@@ -46,8 +49,8 @@ public class MenuMinuman implements BillInterface{
                     menuMinumanList.add(pilihanMenu);
                     hargaMenuMinumanList.add(Double.toString(harga1));
                     hargaMenuMinuman += harga1;
-                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + harga1);
-                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + hargaMenuMinuman);
+                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + df.format(harga1));
+                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + df.format(hargaMenuMinuman));
                     break;
                 case 2 :
                     jumlahPesanan += 1;
@@ -55,8 +58,8 @@ public class MenuMinuman implements BillInterface{
                     menuMinumanList.add(pilihanMenu);
                     hargaMenuMinumanList.add(Double.toString(harga2));
                     hargaMenuMinuman += harga2;
-                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + harga2);
-                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + hargaMenuMinuman);
+                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + df.format(harga2));
+                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + df.format(hargaMenuMinuman));
                     break;
                 case 3 :
                     jumlahPesanan += 1;
@@ -64,8 +67,8 @@ public class MenuMinuman implements BillInterface{
                     menuMinumanList.add(pilihanMenu);
                     hargaMenuMinumanList.add(Double.toString(harga3));
                     hargaMenuMinuman += harga3;
-                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + harga3);
-                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + hargaMenuMinuman);
+                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + df.format(harga3));
+                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + df.format(hargaMenuMinuman));
                     break;
                 case 4 :
                     jumlahPesanan += 1;
@@ -73,8 +76,8 @@ public class MenuMinuman implements BillInterface{
                     menuMinumanList.add(pilihanMenu);
                     hargaMenuMinumanList.add(Double.toString(harga4));
                     hargaMenuMinuman += harga4;
-                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + harga4);
-                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + hargaMenuMinuman);
+                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + df.format(harga4));
+                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + df.format(hargaMenuMinuman));
                     break;
                 case 5 :
                     jumlahPesanan += 1;
@@ -82,8 +85,8 @@ public class MenuMinuman implements BillInterface{
                     menuMinumanList.add(pilihanMenu);
                     hargaMenuMinumanList.add(Double.toString(harga5));
                     hargaMenuMinuman += harga5;
-                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + harga5);
-                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + hargaMenuMinuman);
+                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + df.format(harga5));
+                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + df.format(hargaMenuMinuman));
                     break;
                 case 6 :
                     jumlahPesanan += 1;
@@ -91,8 +94,8 @@ public class MenuMinuman implements BillInterface{
                     menuMinumanList.add(pilihanMenu);
                     hargaMenuMinumanList.add(Double.toString(harga6));
                     hargaMenuMinuman += harga6;
-                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + harga6);
-                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + hargaMenuMinuman);
+                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + df.format(harga6));
+                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + df.format(hargaMenuMinuman));
                     break;
                 case 7 :
                     jumlahPesanan += 1;
@@ -100,8 +103,8 @@ public class MenuMinuman implements BillInterface{
                     menuMinumanList.add(pilihanMenu);
                     hargaMenuMinumanList.add(Double.toString(harga7));
                     hargaMenuMinuman += harga7;
-                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + harga7);
-                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + hargaMenuMinuman);
+                    System.out.println("\nAnda memilih menu " + pilihanMenu.toUpperCase() + " , dengan harga : Rp" + df.format(harga7));
+                    System.out.println("Total pesanan " + jumlahPesanan + " menu, dengan total harga : Rp" + df.format(hargaMenuMinuman));
                     break;
                 default:
                     break;

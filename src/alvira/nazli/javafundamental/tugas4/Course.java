@@ -5,7 +5,7 @@ import alvira.nazli.javafundamental.tugas4.abstractions.StudentInterface;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Course extends Person implements StudentInterface {
+public class Course implements StudentInterface {
     Integer matkulPilihan;
     Integer jumlahSks=0;
     String menuCourse;
