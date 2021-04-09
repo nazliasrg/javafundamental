@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MainApp {
     public static void main(String[] args) {
         int menuUser;
-        double total;
+        double total, totalPPn;
         String menuKembali;
         ArrayList<String> pesananUser = new ArrayList<>();
         ArrayList<String> hargaPesananUser = new ArrayList<>();
@@ -50,6 +50,7 @@ public class MainApp {
         System.out.println("============================================================================================");
 
         total= menuPahe.setTotalHarga() + menuMakanan.setTotalHarga() + menuMinuman.setTotalHarga();
+        totalPPn = 1.1*total;
 
         menuPilihanUser.add(pesananUser);
         menuPilihanUser.add(hargaPesananUser);
@@ -59,7 +60,7 @@ public class MainApp {
         for (int i=0; i<menuPilihanUser.get(0).size(); i++) {
                 System.out.println(i+1 + ".   " + menuPilihanUser.get(0).get(i) + "    =>   Rp " + menuPilihanUser.get(1).get(i));
         }
-        System.out.println("Total Harga   => Rp " + total);
+        System.out.println("Total Harga   => Rp " + totalPPn);
         System.out.println("============================================================================================");
     }
 }
