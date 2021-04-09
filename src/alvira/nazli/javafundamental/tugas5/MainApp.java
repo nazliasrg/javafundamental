@@ -60,7 +60,8 @@ public class MainApp {
         for (int i=0; i<menuPilihanUser.get(0).size(); i++) {
                 System.out.println(i+1 + ".   " + menuPilihanUser.get(0).get(i) + "    =>   Rp " + menuPilihanUser.get(1).get(i));
         }
-        System.out.println("Total Harga   => Rp " + totalPPn);
+        System.out.println("Total Harga                    => Rp " + total);
+        System.out.println("Total Harga setelah PPn (10%)  => Rp " + totalPPn);
         System.out.println("============================================================================================");
     }
 }
